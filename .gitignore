@@ -1,0 +1,27 @@
+# WordPress standard ignore
+# OS specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.~
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.vcproj
+*.vcxproj
+*.filters
+
+# Plugin specific
+deploy.sh
+bulk-plugin-manager.zip
+*.log
+error_log
+
+# Build/Vendor (if any in future)
+node_modules/
+vendor/

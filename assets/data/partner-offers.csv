@@ -1,0 +1,5 @@
+type,id,title,description,badge,href,image,cta,placement,width,height,maxWidth,minHeight,aspectRatio,scaleMode,active,priority
+hero,spotlight-1,DazeStack Partner Spotlight,Exclusive tools and services curated for faster plugin rollouts.,Featured,https://ashishdungdung.com,,View partner,hero,,,640px,240px,16/9,cover,1,1
+offer,offer-1,Performance Pack,Optimization helpers to keep installs lean and fast.,Editor pick,https://ashishdungdung.com/#,,See offer,grid,,,320px,160px,4/3,cover,1,2
+offer,offer-2,Security Watchlist,Monitor plugin risk signals with a trusted partner.,Security,https://ashishdungdung.com/#,,Get access,grid,,,320px,160px,4/3,cover,1,3
+offer,offer-3,Design Toolkit,UX and branding assets for polished admin workspaces.,Design,https://ashishdungdung.com/#,,Explore,grid,,,320px,160px,4/3,cover,1,4

@@ -1,0 +1,632 @@
+# Copyright (C) 2026 Ashish Dungdung
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DazeStack Bulk Plugin Manager 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bulk-plugin-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-27T18:41:12+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dazestack-bulk-plugin-manager\n"
+
+#. Plugin Name of the plugin
+#: bulk-plugin-manager.php
+#: includes/class-dsbpm-admin-menu.php:118
+msgid "DazeStack Bulk Plugin Manager"
+msgstr ""
+
+#. Description of the plugin
+#: bulk-plugin-manager.php
+msgid "High-efficiency bulk provisioning for WordPress plugin stacks."
+msgstr ""
+
+#. Author of the plugin
+#: bulk-plugin-manager.php
+msgid "Ashish Dungdung"
+msgstr ""
+
+#. Author URI of the plugin
+#: bulk-plugin-manager.php
+msgid "https://ashishdungdung.com"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:27
+#: includes/class-dsbpm-admin-menu.php:424
+msgid "DazeStack Suite"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:28
+msgid "DazeStack"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:38
+#: includes/class-dsbpm-admin-menu.php:39
+msgid "Dashboard"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:47
+#: includes/class-dsbpm-admin-menu.php:48
+#: includes/class-dsbpm-admin-menu.php:84
+#: includes/class-dsbpm-admin-menu.php:501
+msgid "Bulk Plugin Manager"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:62
+msgid "DazeStack - Made in India"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:63
+msgid "DazeStack Dashboard"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:64
+msgid "A living space for the DazeStack WordPress plugin series. Crafted by Ashish Dungdung to keep sites lean, colorful, and fast."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:66
+msgid "Performance-first"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:67
+msgid "Design Language"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:68
+msgid "Future-ready"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:72
+msgid "Open Bulk Plugin Manager"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:73
+msgid "Project Page"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:79
+msgid "The Story"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:80
+msgid "DazeStack is a bold WordPress toolkit born in India. It pairs visual finesse with automation so teams can launch stacks faster without losing craft."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:81
+msgid "This dashboard will house future modules. For now, jump into the Bulk Plugin Manager to orchestrate your plugins with grace."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:85
+#: includes/class-dsbpm-admin-menu.php:502
+msgid "Provision faster. Install smarter. Stay lean."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:86
+#: includes/class-dsbpm-admin-menu.php:503
+msgid "Live"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:87
+msgid "Launch Manager"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:90
+msgid "Coming Next"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:92
+msgid "Performance Canvas"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:93
+msgid "Stack Guard (Uptime + Security)"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:94
+msgid "Playbooks for multisite rollouts"
+msgstr ""
+
+#. translators: 1: URL to website
+#: includes/class-dsbpm-admin-menu.php:96
+#, php-format
+msgid "Your ideas welcome. Drop a note at <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">ashishdungdung.com</a>."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:117
+msgid "Made in India &middot; DazeStack Series"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:119
+msgid "Provision faster. Install smarter. Stay lean. A vibrant, fluid workspace to orchestrate plugins without losing design craft."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:121
+msgid "Bulk install"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:122
+msgid "Health + Simulation"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:123
+msgid "Payload aware"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:127
+msgid "Export Current Stack"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:128
+msgid "Run Bulk Install"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:129
+msgid "Stop Install"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:141
+msgid "Import Stack"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:142
+msgid "CSV / XLSX headers: slug, source (url), version, activate (1/0), network (1/0), force (1/0). JSON: [{\"slug\":\"elementor\",\"activate\":1}]. Slugs are sanitized automatically."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:146
+msgid "Drop a CSV/XLSX or paste slugs to build your stack."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:149
+msgid "Paste plugin slugs, one per line"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:151
+msgid "Add Slugs"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:153
+msgid "Download CSV Template"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:154
+msgid "Download JSON Template"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:157
+msgid "Ready for clean imports. Duplicates are ignored."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:162
+msgid "Remote Source"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:163
+msgid "Point to a CSV or JSON file hosted anywhere. CSV must include a header row. JSON can be an array of strings (slugs) or objects with slug/source/version."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:167
+msgid "Fetch"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:169
+msgid "Supports CSV or JSON lists. Remote fetches are user-initiated and logged."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:174
+msgid "Stack Health"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:183
+msgid "Run pre-flight to see risk flags."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:187
+msgid "Auto pre-flight on import"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:191
+msgid "Auto payload sizing"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:194
+msgid "Run Pre-Flight"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:195
+msgid "Simulation Mode"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:201
+msgid "Payload"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:204
+msgid "Total Payload: --"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:207
+msgid "Calculate Payload"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:210
+msgid "High Reliability Mode (background queue)"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:213
+msgid "Get a payload profile before you press install."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:219
+msgid "Queue"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:221
+msgid "Smart Sort"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:222
+msgid "Save Favorite"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:223
+msgid "Load Favorite"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:224
+msgid "Clear"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:227
+msgid "Lean queue. Add plugins or load a favorite."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:229
+msgid "No plugins queued yet. Import a stack, fetch remote, or paste slugs to start."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:232
+msgid "Clean = no risk flags"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:233
+msgid "Installed = successful"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:234
+msgid "Rescued = install failed and rolled back"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:235
+msgid "Blocked = security"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:241
+msgid "Site Metrics"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:244
+msgid "Refresh Metrics"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:247
+msgid "Security Bouncer"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:249
+msgid "WPScan API key (optional)"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:250
+msgid "Run Scan"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:252
+msgid "Blocks critical vulnerabilities when an API key is set."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:255
+msgid "Bulk Actions"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:257
+msgid "Deactivate All (except DazeStack)"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:258
+msgid "Delete All (except DazeStack)"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:260
+msgid "Use with care. These actions cannot be undone."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:265
+msgid "Managed Plugins"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:267
+msgid "Active"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:268
+msgid "Pinned"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:269
+msgid "Notes ready"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:275
+msgid "Spotlight"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:277
+#: includes/class-dsbpm-admin-menu.php:280
+msgid "Curated partner recommendations"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:279
+msgid "Partner spotlight"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:281
+msgid "Fresh offers from trusted tools and services that complement your DazeStack workflow."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:283
+msgid "Explore offers"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:289
+msgid "Loading partner feed..."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:293
+msgid "Partner Offers"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:295
+msgid "Offers will appear here once the feed loads."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:301
+msgid "Filesystem Credentials Required"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:303
+msgid "Close"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:324
+msgid "DazeStack Modules"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:341
+msgid "Install Plugin"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:353
+msgid "Open Module"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:405
+msgid "Terms &amp; Conditions"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:406
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:408
+msgid "Made with <span class=\"dsbpm-heart\" aria-hidden=\"true\">&hearts;</span> in India."
+msgstr ""
+
+#. translators: 1: URL to brand site
+#: includes/class-dsbpm-admin-menu.php:409
+#, php-format
+msgid "All Rights and Trademarks reserved. &copy; 2026 <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">DazeStack</a> - DazeStack Bulk Manager - DazeStack WP Plugin Series."
+msgstr ""
+
+#. translators: 1: URL to author site
+#: includes/class-dsbpm-admin-menu.php:410
+#, php-format
+msgid "Author - &copy; 2026 <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Ashish Dungdung</a>."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:412
+#: includes/class-dsbpm-admin-menu.php:414
+#: includes/class-dsbpm-admin-menu.php:434
+msgid "Buy me a coffee"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:425
+msgid "Made with <span class=\"dsbpm-heart\" aria-hidden=\"true\">&hearts;</span> in India"
+msgstr ""
+
+#. translators: 1: URL to author site
+#: includes/class-dsbpm-admin-menu.php:426
+#, php-format
+msgid "Author: <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Ashish Dungdung</a>"
+msgstr ""
+
+#. translators: 1: URL to author site
+#: includes/class-dsbpm-admin-menu.php:427
+msgid "Brand: DazeStack &middot; WP Bulk Plugin Manager"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:430
+msgid "Support the Work"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:431
+msgid "If this manager saves you time, consider supporting ongoing development and new DazeStack modules."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:445
+#: includes/class-dsbpm-ajax.php:39
+msgid "Insufficient permissions."
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:504
+msgid "Open Manager"
+msgstr ""
+
+#: includes/class-dsbpm-admin-menu.php:506
+#: includes/class-dsbpm-installer.php:144
+msgid "Installed"
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:129
+msgid "Plugin not found in WordPress.org."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:140
+msgid "Not updated in 2+ years."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:146
+msgid "Low adoption (< 1k installs)."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:151
+msgid "Not tested with current WP version."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:241
+msgid "WPScan API key missing. Scan skipped."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:322
+msgid "Plugins directory not writable."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:334
+msgid "Plugin not found in WP.org repository."
+msgstr ""
+
+#. translators: 1: Required PHP version, 2: Current PHP version
+#: includes/class-dsbpm-ajax.php:340
+#, php-format
+msgid "Requires PHP %1$s (current: %2$s)."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:396
+#: includes/class-dsbpm-ajax.php:418
+msgid "Plugin file required."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:438
+msgid "Action Scheduler not available."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:445
+msgid "Queued in background."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:456
+msgid "Name required."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:570
+msgid "Nothing to deactivate."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:573
+msgid "Deactivated."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:587
+msgid "Nothing to delete."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:597
+msgid "Deleted."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:618
+msgid "Deactivated all plugins except DazeStack."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:648
+msgid "Deleted all plugins except DazeStack."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:658
+msgid "URL required."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:662
+msgid "Invalid URL."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:679
+msgid "Empty response."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:729
+msgid "Hostname and username are required."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:733
+msgid "Filesystem credentials rejected."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:737
+msgid "Credentials stored."
+msgstr ""
+
+#: includes/class-dsbpm-ajax.php:755
+msgid "Invalid plugin data."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:39
+msgid "Slug or source required."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:62
+msgid "Plugin is pinned and cannot be updated."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:67
+msgid "Security alert: critical vulnerability detected."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:73
+msgid "Already installed."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:82
+msgid "Installed version is newer. Enable force to downgrade."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:102
+msgid "Plugin not found in repository."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:126
+msgid "Install failed."
+msgstr ""
+
+#: includes/class-dsbpm-installer.php:190
+msgid "Filesystem credentials required."
+msgstr ""
+
+#: includes/class-dsbpm-partners.php:33
+msgid "Partner offers URL is not configured."
+msgstr ""
+
+#: includes/class-dsbpm-partners.php:49
+msgid "Partner offers feed returned empty content."
+msgstr ""
+
+#: includes/class-dsbpm-partners.php:59
+msgid "Local partner offers backup not found."
+msgstr ""
+
+#: includes/class-dsbpm-partners.php:64
+msgid "Local partner offers backup is empty."
+msgstr ""

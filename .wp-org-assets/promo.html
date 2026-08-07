@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DazeStack Promo</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				background: #0f172a;
+				font-family:
+					"Inter",
+					-apple-system,
+					BlinkMacSystemFont,
+					sans-serif;
+				overflow: hidden;
+				color: #ffffff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Abstract glowing background blobs */
+			.bg-blob {
+				position: absolute;
+				width: 80vw;
+				height: 80vw;
+				border-radius: 50%;
+				filter: blur(100px);
+				opacity: 0.6;
+				z-index: 0;
+				animation: float 15s ease-in-out infinite alternate;
+			}
+			.blob-1 {
+				background: radial-gradient(
+					circle,
+					rgba(139, 92, 246, 0.8) 0%,
+					rgba(59, 130, 246, 0) 70%
+				);
+				top: -20%;
+				left: -10%;
+			}
+			.blob-2 {
+				background: radial-gradient(
+					circle,
+					rgba(236, 72, 153, 0.8) 0%,
+					rgba(244, 63, 94, 0) 70%
+				);
+				bottom: -20%;
+				right: -10%;
+			}
+			.blob-3 {
+				background: radial-gradient(
+					circle,
+					rgba(56, 189, 248, 0.8) 0%,
+					rgba(14, 165, 233, 0) 70%
+				);
+				top: 40%;
+				left: 40%;
+			}
+
+			@keyframes float {
+				0% {
+					transform: translate(0, 0) scale(1);
+				}
+				50% {
+					transform: translate(5%, 5%) scale(1.1);
+				}
+				100% {
+					transform: translate(-5%, -5%) scale(0.9);
+				}
+			}
+
+			.slide {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transform: translateY(30px);
+				z-index: 10;
+				text-align: center;
+			}
+
+			/* Slide 1: Intro */
+			#slide1 {
+				animation: slideAnim 4s cubic-bezier(0.16, 1, 0.3, 1) 0s
+					forwards;
+			}
+			#slide1 img {
+				width: 180px;
+				margin-bottom: 2rem;
+				border-radius: 40px;
+				box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+			}
+			#slide1 h1 {
+				font-size: 4rem;
+				font-weight: 800;
+				margin: 0;
+				background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			#slide1 h2 {
+				font-size: 2rem;
+				font-weight: 400;
+				color: #94a3b8;
+				margin-top: 0.5rem;
+				letter-spacing: -0.02em;
+			}
+
+			/* Slide 2: Problem */
+			#slide2 {
+				animation: slideAnim 4s cubic-bezier(0.16, 1, 0.3, 1) 4s
+					forwards;
+			}
+			#slide2 h1 {
+				font-size: 5rem;
+				font-weight: 800;
+				max-width: 1200px;
+				line-height: 1.1;
+				margin: 0;
+			}
+			#slide2 span {
+				color: #f43f5e;
+			}
+
+			/* Slide 3: Solution */
+			#slide3 {
+				animation: slideAnim 5s cubic-bezier(0.16, 1, 0.3, 1) 8s
+					forwards;
+			}
+			#slide3 img {
+				width: 800px;
+				border-radius: 20px;
+				box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
+				margin-bottom: 3rem;
+				transform: perspective(1000px) rotateX(10deg);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			#slide3 h2 {
+				font-size: 3rem;
+				font-weight: 600;
+				margin: 0;
+			}
+
+			/* Slide 4: Outro */
+			#slide4 {
+				animation: slideAnimIn 4s cubic-bezier(0.16, 1, 0.3, 1) 13s
+					forwards;
+			}
+			#slide4 img {
+				width: 1000px;
+				border-radius: 20px;
+				box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
+				margin-bottom: 3rem;
+			}
+			#slide4 h1 {
+				font-size: 3rem;
+				font-weight: 800;
+				margin: 0;
+			}
+			#slide4 .badge {
+				background: #3b82f6;
+				color: white;
+				padding: 1rem 2rem;
+				border-radius: 100px;
+				font-weight: 600;
+				font-size: 1.5rem;
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+				display: inline-block;
+				box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+				text-decoration: none;
+				transition: transform 0.2s, background 0.2s;
+			}
+			#slide4 .badge:hover {
+				transform: translateY(-5px);
+				background: #2563eb;
+			}
+			#slide4 .credits {
+				font-size: 1rem;
+				color: #94a3b8;
+				font-weight: 400;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				background: rgba(255, 255, 255, 0.05);
+				padding: 10px 20px;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			#slide4 .credits a {
+				color: #f8fafc;
+				font-weight: 600;
+				text-decoration: none;
+				border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+				transition: border-color 0.2s;
+			}
+			#slide4 .credits a:hover {
+				border-color: #fff;
+			}
+
+			@keyframes slideAnim {
+				0% {
+					opacity: 0;
+					transform: translateY(40px) scale(0.95);
+				}
+				10% {
+					opacity: 1;
+					transform: translateY(0) scale(1);
+				}
+				90% {
+					opacity: 1;
+					transform: translateY(0) scale(1);
+				}
+				100% {
+					opacity: 0;
+					transform: translateY(-40px) scale(1.05);
+				}
+			}
+
+			@keyframes slideAnimIn {
+				0% {
+					opacity: 0;
+					transform: translateY(40px) scale(0.95);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0) scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg-blob blob-1"></div>
+		<div class="bg-blob blob-2"></div>
+		<div class="bg-blob blob-3"></div>
+
+		<div class="slide" id="slide1">
+			<img src="icon-256x256.png" alt="DazeStack Icon" />
+			<h1>DazeStack</h1>
+			<h2>Bulk Plugin Manager</h2>
+		</div>
+
+		<div class="slide" id="slide2">
+			<h1>Stop installing plugins <span>one by one.</span></h1>
+		</div>
+
+		<div class="slide" id="slide3">
+			<img src="screenshot-new.png" alt="Dashboard Mockup" />
+			<h2>
+				Experience Lightning Fast Provisioning.<br />With an
+				Award-Winning Mac-Style Interface.
+			</h2>
+		</div>
+
+		<div class="slide" id="slide4">
+			<img src="banner-1544x500.png" alt="Banner" />
+			<h1>Available Now.</h1>
+			<a href="https://wordpress.org/plugins/dazestack-bulk-plugin-manager/" target="_blank" class="badge">Download on WordPress.org</a><br>
+			<div class="credits">Designed and Developed By <a href="https://ashishdungdung.com" target="_blank">Ashish Dungdung</a>, Under DazeStack WordPress Solutions</div>
+		</div>
+
+		<script>
+			// Signal when animation finishes for the headless browser recording
+			setTimeout(() => {
+				document.body.setAttribute("data-animation-done", "true");
+			}, 18000);
+		</script>
+	</body>
+</html>
