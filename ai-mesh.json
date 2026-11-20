@@ -1,0 +1,141 @@
+{
+  "$schema": "https://antigravity.ai/schemas/ai-mesh.v1.json",
+  "project": "dazestack-bulk-plugin-manager",
+  "description": "DazeStack Bulk Plugin Manager — High-efficiency WordPress Plugin Provisioning Fleet & AI Mesh Configuration",
+  "domainEngine": "DazeStackDomainEngine",
+  "defaultTier": "balanced",
+  "models": {
+    "default": "claude-haiku-5.5",
+    "arbiter": "gpt-6-luna",
+    "editorialArbiter": "gpt-6-luna",
+    "codeReview": "gpt-6-luna",
+    "parallelDiffusion": "mercury-3",
+    "highThroughput": "deepseek-v4.1-flash",
+    "mathStem": "qwen3.8-flash",
+    "documentSynthesis": "mimo-v2.6-flash",
+    "wholeAudit": "moonshotai/kimi-k3",
+    "vision": "meta/llama-3.2-90b-vision-instruct",
+    "local": "google/gemma-4-12b-qat",
+    "freePromo": "mimo-v2.6-pro",
+    "fallback": "deepseek-v4.1-flash",
+    "roster": {
+      "claude-haiku-5.5": {
+        "role": "default",
+        "provider": "experiential_gateway",
+        "aliases": ["haiku", "haiku-5.5", "workhorse"],
+        "speed": "541 tok/s",
+        "contextWindow": 1048576,
+        "costPerMillionIn": 0.10,
+        "costPerMillionCached": 0.010,
+        "costPerMillionOut": 0.50,
+        "notes": "Primary agent workhorse. Highest speed-to-cost ratio, 1M context with 90% prompt caching discount."
+      },
+      "mercury-3": {
+        "role": "parallelDiffusion",
+        "provider": "experiential_gateway",
+        "creator": "Inception",
+        "aliases": ["mercury", "diffusion"],
+        "architecture": "Diffusion-based parallel token generation LLM",
+        "contextWindow": 1048576,
+        "maxOutput": 131072,
+        "costPerMillionIn": 0.20,
+        "costPerMillionCached": 0.020,
+        "costPerMillionOut": 0.70,
+        "notes": "World's first diffusion parallel generator. Ultra-high throughput multi-token generation for massive code blocks."
+      },
+      "gpt-6-luna": {
+        "role": "arbiter",
+        "provider": "experiential_gateway",
+        "aliases": ["luna", "luna-6", "arbiter"],
+        "contextWindow": 1048576,
+        "costPerMillionIn": 0.025,
+        "costPerMillionOut": 0.13,
+        "reasoningControl": "model_reasoning_effort=high",
+        "notes": "Principal architectural arbiter, frontier reasoning, distributed lock arbitration, security audits."
+      },
+      "moonshotai/kimi-k3": {
+        "role": "wholeAudit",
+        "provider": "nvidia_nim",
+        "aliases": ["kimi", "kimi-k3"],
+        "contextWindow": 1048576,
+        "notes": "1 Million Token Context Window on NVIDIA NIM. Whole-codebase audits, monolithic log parsing, deep cross-file reasoning."
+      },
+      "deepseek-v4.1-flash": {
+        "role": "highThroughput",
+        "provider": "experiential_gateway",
+        "aliases": ["v4.1-flash", "flash"],
+        "contextWindow": 131072,
+        "costPerMillionIn": 0.15,
+        "costPerMillionOut": 0.60,
+        "notes": "High-throughput syntax checking, component verification, rapid streaming diffs."
+      },
+      "qwen3.8-flash": {
+        "role": "mathStem",
+        "provider": "experiential_gateway",
+        "aliases": ["qwen-flash", "math"],
+        "contextWindow": 131072,
+        "notes": "Mathematical calculations, payload sizing, batch memory limit proofs."
+      },
+      "mimo-v2.6-flash": {
+        "role": "documentSynthesis",
+        "provider": "experiential_gateway",
+        "aliases": ["mimo-flash", "synthesis"],
+        "contextWindow": 1048576,
+        "notes": "High-capacity document synthesis, changelog generation, Markdown tables, and specs."
+      },
+      "meta/llama-3.2-90b-vision-instruct": {
+        "role": "vision",
+        "provider": "nvidia_nim",
+        "aliases": ["vision", "llama-vision"],
+        "notes": "Multimodal visual inspection of WP Admin UI screenshots, glassmorphic themes, and responsive views."
+      },
+      "google/gemma-4-12b-qat": {
+        "role": "local",
+        "provider": "apple_silicon_grid",
+        "endpoint": "http://127.0.0.1:1234/v1",
+        "cost": "$0.00 (Zero Token Burn)",
+        "notes": "Offline local Apple Silicon execution. AST transforms, pre-commit hygiene, offline analysis."
+      },
+      "mimo-v2.6-pro": {
+        "role": "freePromo",
+        "provider": "experiential_gateway",
+        "aliases": ["mimo-pro", "promo"],
+        "costPerMillionIn": 0,
+        "costPerMillionOut": 0,
+        "hourlyCeiling": "5,142,857 tokens / hour (~85,714 tok/min)",
+        "notes": "Free promotional drafting model. Resets at XX:00 UTC."
+      }
+    }
+  },
+  "caching": {
+    "enforceFloor": true,
+    "minimumPrefixTokens": 1024,
+    "defaultTTLSeconds": 300,
+    "promptCacheKeyPrefix": "dsbpm",
+    "version": "v2.0"
+  },
+  "network": {
+    "timeoutMs": 60000,
+    "maxRetries": 3,
+    "backoffFactor": 1.5,
+    "concurrencyLimit": 6
+  },
+  "budget": {
+    "paidFallback": true,
+    "maxMonthlySpendUSD": 25,
+    "alertThresholdUSD": 15
+  },
+  "vault": {
+    "envPath": "~/.config/antigravity/ai_mesh.env",
+    "requiredKeys": [
+      "EXPLABS_API_KEY",
+      "NVIDIA_API_KEY"
+    ],
+    "profiles": [
+      "ae",
+      "solarqna",
+      "personal",
+      "brother"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "id": "node-mesh-hub",
+      "type": "text",
+      "text": "# 🛰️ DazeStack Intelligence & Project Mesh\n- **Tier 1:** Obsidian Canvas (`docs/canvas/*.canvas`) — Zero-token visual architecture\n- **Tier 2:** Notion Mobile Brain (`docs/roadmap/notion-mirror.md`) — Ideas & strategy\n- **Tier 3:** Plane.so Cycles & Modules (`docs/roadmap/plane-mirror.md`) — Waves 1-3 sprint engine\n- **Tier 4:** GitHub Projects v2 & Git (`docs/roadmap/github-mirror.md`) — Execution & SVN deploy",
+      "x": 350,
+      "y": -350,
+      "width": 550,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "node-wave-1",
+      "type": "text",
+      "text": "## 🟢 Wave 1: Foundation (v0.0.1)\n> **Status:** COMPLETED & DEPLOYED (SVN Rev 3475033)\n\n### Deliverables\n- **Core Bulk Installer & Provisioner**\n- **Silent Upgrader Skin (`WP_Upgrader_Skin`)**\n- **WPScan API Integration (CVSS >= 9.0)**\n- **CSV & Slug Stack Import/Export**\n- **Zero Frontend Asset Impact**",
+      "x": -250,
+      "y": -60,
+      "width": 420,
+      "height": 260,
+      "color": "4"
+    },
+    {
+      "id": "node-wave-2",
+      "type": "text",
+      "text": "## 🟢 Wave 2: Recipes & Hardening (v0.0.2)\n> **Status:** COMPLETED & DEPLOYED (SVN Rev 3638346)\n\n### Deliverables\n- **Stack Recipes Library** (WooCommerce, Performance, Security, SEO)\n- **Automated Rollback Guard** (`try/catch \\Throwable`)\n- **1-Click WP-CLI Command Generator**\n- **SSRF Defense** (Host IP check, 5MB body cap)\n- **Live Search Filtering & Auto-Update Toggles**\n- **About & Legal + Review & Rate Us Pages**",
+      "x": 220,
+      "y": -60,
+      "width": 420,
+      "height": 260,
+      "color": "4"
+    },
+    {
+      "id": "node-wave-3",
+      "type": "text",
+      "text": "## 🟡 Wave 3: AI Mesh & Enterprise Network (v0.0.3)\n> **Status:** ACTIVE SPRINT\n\n### Deliverables\n- **Universal 4-Tier AI Mesh Integration** (`ai-mesh.json`)\n- **AI Stack Conflict Matrix** via NVIDIA NIM Kimi-K3\n- **WordPress Multisite Network Provisioner**\n- **Cloudflare Edge Recipe Sync**\n- **Dark Mode OS Theme Matching**",
+      "x": 690,
+      "y": -60,
+      "width": 440,
+      "height": 260,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-mesh-to-w1",
+      "fromNode": "node-mesh-hub",
+      "fromSide": "bottom",
+      "toNode": "node-wave-1",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-mesh-to-w2",
+      "fromNode": "node-mesh-hub",
+      "fromSide": "bottom",
+      "toNode": "node-wave-2",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-mesh-to-w3",
+      "fromNode": "node-mesh-hub",
+      "fromSide": "bottom",
+      "toNode": "node-wave-3",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-w1-to-w2",
+      "fromNode": "node-wave-1",
+      "fromSide": "right",
+      "toNode": "node-wave-2",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-w2-to-w3",
+      "fromNode": "node-wave-2",
+      "fromSide": "right",
+      "toNode": "node-wave-3",
+      "toSide": "left"
+    }
+  ]
+}

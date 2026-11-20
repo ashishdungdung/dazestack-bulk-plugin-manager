@@ -1,0 +1,31 @@
+{
+  "name": "dazestack-bulk-plugin-manager",
+  "version": "0.0.2",
+  "description": "High-efficiency bulk provisioning and stack management workspace for WordPress plugins.",
+  "type": "module",
+  "author": "Ashish Dungdung (DazeStack Series)",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://dazestack.com",
+  "repository": {
+    "type": "svn",
+    "url": "https://plugins.svn.wordpress.org/dazestack-bulk-plugin-manager"
+  },
+  "scripts": {
+    "mesh:health": "node scripts/ai/ai_mesh_client.mjs health",
+    "mesh:consult": "node scripts/ai/ai_mesh_client.mjs",
+    "task:list": "node scripts/bridge/task-manage.mjs list",
+    "task:done": "node scripts/bridge/task-manage.mjs done",
+    "task:start": "node scripts/bridge/task-manage.mjs start",
+    "bridge:sync": "node scripts/bridge/sync-all.mjs",
+    "hook:install": "bash scripts/bridge/install-git-hook.sh",
+    "lint:php": "php -l bulk-plugin-manager.php && for f in includes/*.php; do php -l \"$f\"; done",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": [
+    "wordpress",
+    "bulk-install",
+    "plugin-manager",
+    "ai-mesh",
+    "dazestack"
+  ]
+}

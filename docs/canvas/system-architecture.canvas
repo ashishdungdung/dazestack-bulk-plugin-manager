@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "node-core-hub",
+      "type": "text",
+      "text": "# ⚙️ DazeStack Bulk Plugin Manager Architecture\n- **Entry Point:** `bulk-plugin-manager.php`\n- **Controller:** `DSBPM_Admin` & `DSBPM_AJAX`\n- **Design Language:** Mac-style Frosted Glassmorphism\n- **Security:** AES-256 Credentials, SSRF Mitigation, Nonces",
+      "x": 300,
+      "y": -300,
+      "width": 480,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "node-installer",
+      "type": "text",
+      "text": "### 🛡️ Installer & Rollback Guard\n- **Class:** `DSBPM_Installer`\n- **Skin:** `DSBPM_Upgrader_Skin` (Silent feedback)\n- **Sandbox:** `try...catch (\\Throwable $e)`\n- **Automatic Rollback:** Auto-deactivate crashing plugin & capture trace without breaking WP Admin.",
+      "x": -150,
+      "y": -50,
+      "width": 380,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "node-recipes",
+      "type": "text",
+      "text": "### 📚 Recipes & WP-CLI Generator\n- **Class:** `DSBPM_Recipes`\n- **Pre-built Playbooks:** WooCommerce, Performance, Security, SEO\n- **Persistence:** Custom user stacks stored in WP options (`dsbpm_recipes`)\n- **WP-CLI Output:** `wp plugin install <slugs> --activate`",
+      "x": 300,
+      "y": -50,
+      "width": 380,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "node-ai-mesh",
+      "type": "text",
+      "text": "### 🧠 Universal AI Mesh Engine\n- **Config:** `ai-mesh.json` (Vault: `~/.config/antigravity/ai_mesh.env`)\n- **Tier 0:** Local Apple Silicon UMA / Gemma 4 ($0.00)\n- **Tier 1:** NVIDIA NIM Kimi-K3 1M Context & Vision\n- **Tier 2:** Claude Haiku 5.5 (541 tok/s) & Mercury 3\n- **Tier 3:** Cross-Project Domain Engines (AshWebsite, SolarQna)",
+      "x": 750,
+      "y": -50,
+      "width": 420,
+      "height": 200,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-core-to-inst",
+      "fromNode": "node-core-hub",
+      "fromSide": "bottom",
+      "toNode": "node-installer",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-core-to-rec",
+      "fromNode": "node-core-hub",
+      "fromSide": "bottom",
+      "toNode": "node-recipes",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-core-to-ai",
+      "fromNode": "node-core-hub",
+      "fromSide": "bottom",
+      "toNode": "node-ai-mesh",
+      "toSide": "top"
+    }
+  ]
+}
