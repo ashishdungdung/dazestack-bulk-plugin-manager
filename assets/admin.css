@@ -1570,3 +1570,41 @@
 .dsbpm-card__meta-links a:hover {
 	text-decoration: underline;
 }
+
+/* ==========================================================================
+   Internationalization & RTL (Right-to-Left) Styles
+   Supports Arabic, Hebrew, Urdu, Persian/Farsi WordPress admin sites
+   ========================================================================== */
+body.rtl .dsbpm-app,
+[dir="rtl"] .dsbpm-app {
+	direction: rtl;
+	text-align: right;
+}
+
+body.rtl .dsbpm-hero,
+[dir="rtl"] .dsbpm-hero {
+	text-align: right;
+}
+
+body.rtl .dsbpm-brand-card,
+[dir="rtl"] .dsbpm-brand-card {
+	text-align: left;
+}
+
+body.rtl .dsbpm-modal__close,
+[dir="rtl"] .dsbpm-modal__close {
+	right: auto;
+	left: 18px;
+}
+
+body.rtl .dsbpm-input--search,
+[dir="rtl"] .dsbpm-input--search {
+	text-align: right;
+}
+
+body.rtl .dsbpm-float-coffee,
+[dir="rtl"] .dsbpm-float-coffee {
+	right: auto;
+	left: 24px;
+}
+

@@ -112,10 +112,14 @@ class DSBPM_Admin
 		wp_enqueue_script(
 			'dsbpm-admin',
 			DSBPM_URL . 'assets/admin.js',
-			array('dsbpm-read-excel'),
+			array('dsbpm-read-excel', 'wp-i18n'),
 			DSBPM_VERSION,
 			true
 		);
+
+		if (function_exists('wp_set_script_translations')) {
+			wp_set_script_translations('dsbpm-admin', 'dazestack-bulk-plugin-manager', DSBPM_DIR . 'languages');
+		}
 
 		wp_localize_script(
 			'dsbpm-admin',
