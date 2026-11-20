@@ -39,13 +39,16 @@
   - Live Search filtering on managed plugins.
   - In-Plugin About & Legal and ⭐ Review & Rate Us pages.
 
-### Cycle: Wave 3 — AI Mesh, Multisite Network & Cloudflare Sync (v0.0.3)
-- **Status:** Active / In Planning
+### Cycle: Wave 3 — Multilingual i18n, RTL Layouts & Multisite Foundation (v0.0.3)
+- **Status:** Completed & Deployed to WordPress.org SVN (Rev 3812775)
 - **Key Deliverables:**
-  - AI Mesh Integration (`ai-mesh.json` & Claude Haiku 5.5 / Mercury 3 / GPT-6-Luna consultation bridge).
-  - Multisite Network Bulk Provisioning with subsite targeting.
-  - Automated plugin compatibility and conflict matrix using Tier 1 Kimi-K3 audits.
-  - Cloudflare Workers / R2 remote recipe sync.
+  - Full i18n localization textdomain loading and GlotPress compatibility.
+  - Bundled fallback locales: Spanish (`es_ES`), German (`de_DE`), French (`fr_FR`), and Hindi (`hi_IN`).
+  - Bi-directional Right-to-Left (RTL) styling for Arabic, Hebrew, Urdu, and Persian.
+  - WordPress Multisite Network menu hooks and screen handlers.
+  - Queue completion modal dialog with complete ARIA accessibility and z-index isolation.
+  - GDPR-compliant uninstaller (`uninstall.php`) for complete database option and transient cleanup.
+  - Native dark mode token adaptation via `@media (prefers-color-scheme: dark)`.
 
 ---
 
