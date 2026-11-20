@@ -20,6 +20,7 @@
 	};
 
 	const el = (id) => document.getElementById(id);
+	const __ = (text) => (window.wp && window.wp.i18n ? window.wp.i18n.__(text, 'dazestack-bulk-plugin-manager') : text);
 	const queueEl = el('dsbpm-queue');
 	const depsEl = el('dsbpm-deps');
 	const queueSummaryEl = el('dsbpm-queue-summary');
@@ -1392,7 +1393,7 @@
 		const deleteAll = el('dsbpm-delete-all');
 		if (deleteAll) {
 			deleteAll.addEventListener('click', async () => {
-				if (!window.confirm('Delete all plugins except DazeStack?')) return;
+				if (!window.confirm(__('Delete all plugins except DazeStack?'))) return;
 				await ajax('dsbpm_delete_all');
 				runMetrics();
 			});
@@ -1523,6 +1524,18 @@
 			}
 		});
 
+		document.querySelectorAll('.dsbpm-modal').forEach((modal) => {
+			modal.addEventListener('click', (event) => {
+				if (event.target === modal) {
+					closeRecipesModal();
+					closeSaveRecipeModal();
+					closeWpCliModal();
+					hideCredentialsModal();
+					hideQueueCompleteDialog();
+				}
+			});
+		});
+
 		document.body.addEventListener('click', (event) => {
 			const help = event.target.closest('.dsbpm-help');
 			if (!help) return;
@@ -1602,10 +1615,10 @@
 		body.querySelectorAll('.dsbpm-delete-recipe').forEach((btn) => {
 			btn.addEventListener('click', async () => {
 				const id = btn.getAttribute('data-id');
-				if (!window.confirm('Delete this saved recipe?')) return;
+				if (!window.confirm(__('Delete this saved recipe?'))) return;
 				const delRes = await ajax('dsbpm_delete_recipe', { id });
 				if (delRes.success) {
-					toast('Recipe deleted', 'info');
+					toast(__('Recipe deleted'), 'info');
 					loadRecipesList();
 				}
 			});
@@ -1614,7 +1627,7 @@
 
 	function openSaveRecipeModal() {
 		if (!state.queue.length) {
-			toast('Queue is empty. Add plugins to save a recipe.', 'warn');
+			toast(__('Queue is empty. Add plugins to save a recipe.'), 'warn');
 			return;
 		}
 		const modal = el('dsbpm-save-recipe-modal');
@@ -1637,7 +1650,7 @@
 		const description = descInput ? descInput.value.trim() : '';
 
 		if (!title) {
-			toast('Please provide a title for your recipe.', 'error');
+			toast(__('Please provide a title for your recipe.'), 'error');
 			return;
 		}
 
@@ -1646,7 +1659,7 @@
 			closeSaveRecipeModal();
 			if (titleInput) titleInput.value = '';
 			if (descInput) descInput.value = '';
-			toast('Recipe saved successfully!', 'success');
+			toast(__('Recipe saved successfully!'), 'success');
 		} else {
 			toast(resolveError(res, 'Failed to save recipe.'), 'error');
 		}

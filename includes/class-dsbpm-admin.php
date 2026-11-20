@@ -32,6 +32,7 @@ class DSBPM_Admin
 		// Shared UI & Menu
 		$menu = DSBPM_Admin_Menu::instance();
 		add_action('admin_menu', array($menu, 'register_menu'));
+		add_action('network_admin_menu', array($menu, 'register_menu'));
 		add_action('admin_enqueue_scripts', array($this, 'enqueue'));
 		add_action('admin_post_dsbpm_export', array($menu, 'export_csv'));
 
@@ -82,6 +83,9 @@ class DSBPM_Admin
 			'toplevel_page_' . DSBPM_BASE_SLUG,
 			DSBPM_BASE_SLUG . '_page_' . DSBPM_BASE_SLUG,
 			DSBPM_BASE_SLUG . '_page_' . DSBPM_SLUG,
+			'toplevel_page_' . DSBPM_BASE_SLUG . '-network',
+			DSBPM_BASE_SLUG . '_page_' . DSBPM_BASE_SLUG . '-network',
+			DSBPM_BASE_SLUG . '_page_' . DSBPM_SLUG . '-network',
 		);
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended

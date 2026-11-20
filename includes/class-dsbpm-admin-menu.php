@@ -23,10 +23,12 @@ class DSBPM_Admin_Menu
 
 	public function register_menu()
 	{
+		$cap = is_multisite() ? 'manage_network_plugins' : 'install_plugins';
+
 		add_menu_page(
 			__('DazeStack Suite', 'dazestack-bulk-plugin-manager'),
 			__('DazeStack', 'dazestack-bulk-plugin-manager'),
-			'install_plugins',
+			$cap,
 			DSBPM_BASE_SLUG,
 			array($this, 'render_dashboard'),
 			'dashicons-screenoptions',
@@ -37,7 +39,7 @@ class DSBPM_Admin_Menu
 			DSBPM_BASE_SLUG,
 			__('Dashboard', 'dazestack-bulk-plugin-manager'),
 			__('Dashboard', 'dazestack-bulk-plugin-manager'),
-			'install_plugins',
+			$cap,
 			DSBPM_BASE_SLUG,
 			array($this, 'render_dashboard')
 		);
@@ -46,7 +48,7 @@ class DSBPM_Admin_Menu
 			DSBPM_BASE_SLUG,
 			__('Bulk Plugin Manager', 'dazestack-bulk-plugin-manager'),
 			__('Bulk Plugin Manager', 'dazestack-bulk-plugin-manager'),
-			'install_plugins',
+			$cap,
 			DSBPM_SLUG,
 			array($this, 'render_page')
 		);
@@ -55,7 +57,7 @@ class DSBPM_Admin_Menu
 			DSBPM_BASE_SLUG,
 			__('About & Legal', 'dazestack-bulk-plugin-manager'),
 			__('About & Legal', 'dazestack-bulk-plugin-manager'),
-			'install_plugins',
+			$cap,
 			'dsbpm-about-legal',
 			array($this, 'render_about_legal_page')
 		);
@@ -64,7 +66,7 @@ class DSBPM_Admin_Menu
 			DSBPM_BASE_SLUG,
 			__('Review & Rate Us', 'dazestack-bulk-plugin-manager'),
 			__('⭐ Review & Rate Us', 'dazestack-bulk-plugin-manager'),
-			'install_plugins',
+			$cap,
 			'dsbpm-review',
 			array($this, 'render_review_page')
 		);
@@ -321,7 +323,7 @@ class DSBPM_Admin_Menu
 						</div>
 					</div>
 
-					<div class="dsbpm-modal" id="dsbpm-credentials-modal" aria-hidden="true">
+					<div class="dsbpm-modal" id="dsbpm-credentials-modal" role="dialog" aria-modal="true" aria-hidden="true">
 						<div class="dsbpm-modal__content">
 							<div class="dsbpm-modal__title"><?php esc_html_e('Filesystem Credentials Required', 'dazestack-bulk-plugin-manager'); ?></div>
 							<div class="dsbpm-modal__body" id="dsbpm-credentials-body"></div>
@@ -329,7 +331,7 @@ class DSBPM_Admin_Menu
 						</div>
 					</div>
 
-					<div class="dsbpm-modal" id="dsbpm-recipes-modal" aria-hidden="true">
+					<div class="dsbpm-modal" id="dsbpm-recipes-modal" role="dialog" aria-modal="true" aria-hidden="true">
 						<div class="dsbpm-modal__content dsbpm-modal__content--wide">
 							<div class="dsbpm-modal__title"><?php esc_html_e('Recipe Library & Playbooks', 'dazestack-bulk-plugin-manager'); ?></div>
 							<div class="dsbpm-modal__body" id="dsbpm-recipes-body">
@@ -341,7 +343,7 @@ class DSBPM_Admin_Menu
 						</div>
 					</div>
 
-					<div class="dsbpm-modal" id="dsbpm-save-recipe-modal" aria-hidden="true">
+					<div class="dsbpm-modal" id="dsbpm-save-recipe-modal" role="dialog" aria-modal="true" aria-hidden="true">
 						<div class="dsbpm-modal__content">
 							<div class="dsbpm-modal__title"><?php esc_html_e('Save Current Queue as Recipe', 'dazestack-bulk-plugin-manager'); ?></div>
 							<div class="dsbpm-modal__body">
@@ -361,7 +363,7 @@ class DSBPM_Admin_Menu
 						</div>
 					</div>
 
-					<div class="dsbpm-modal" id="dsbpm-wpcli-modal" aria-hidden="true">
+					<div class="dsbpm-modal" id="dsbpm-wpcli-modal" role="dialog" aria-modal="true" aria-hidden="true">
 						<div class="dsbpm-modal__content">
 							<div class="dsbpm-modal__title"><?php esc_html_e('WP-CLI Command Generator', 'dazestack-bulk-plugin-manager'); ?></div>
 							<div class="dsbpm-modal__body">
