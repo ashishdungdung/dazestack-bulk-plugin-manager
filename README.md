@@ -2,7 +2,7 @@
 
 High-efficiency bulk provisioning and stack management for WordPress. Crafted by Ashish Dungdung under the DazeStack series to keep sites lean, colorful, and fast.
 
-[![WordPress Plugin Version](https://img.shields.io/badge/wordpress--plugin-v0.0.2-ff8a65.svg)](https://wordpress.org/plugins/dazestack-bulk-plugin-manager/)
+[![WordPress Plugin Version](https://img.shields.io/badge/wordpress--plugin-v0.0.3-ff8a65.svg)](https://wordpress.org/plugins/dazestack-bulk-plugin-manager/)
 [![PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-1f9d8a.svg)](https://php.net)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 

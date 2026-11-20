@@ -109,7 +109,7 @@ for (const [locale, dict] of Object.entries(translations)) {
   const poFile = path.resolve(LANG_DIR, `dazestack-bulk-plugin-manager-${locale}.po`);
   const moFile = path.resolve(LANG_DIR, `dazestack-bulk-plugin-manager-${locale}.mo`);
 
-  let poContent = `msgid ""\nmsgstr ""\n"Project-Id-Version: DazeStack Bulk Plugin Manager 0.0.2\\n"\n"MIME-Version: 1.0\\n"\n"Content-Type: text/plain; charset=UTF-8\\n"\n"Content-Transfer-Encoding: 8bit\\n"\n"Language: ${locale}\\n"\n"X-Domain: dazestack-bulk-plugin-manager\\n"\n\n`;
+  let poContent = `msgid ""\nmsgstr ""\n"Project-Id-Version: DazeStack Bulk Plugin Manager 0.0.3\\n"\n"MIME-Version: 1.0\\n"\n"Content-Type: text/plain; charset=UTF-8\\n"\n"Content-Transfer-Encoding: 8bit\\n"\n"Language: ${locale}\\n"\n"X-Domain: dazestack-bulk-plugin-manager\\n"\n\n`;
 
   for (const [msgid, msgstr] of Object.entries(dict)) {
     poContent += `msgid "${msgid}"\nmsgstr "${msgstr}"\n\n`;

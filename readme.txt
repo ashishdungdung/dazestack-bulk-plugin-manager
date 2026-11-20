@@ -4,7 +4,7 @@ Tags: bulk install, plugin management, automation, admin tools, migration
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 0.0.2
+Stable tag: 0.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,15 @@ Absolutely. The plugin leverages core WordPress APIs for all installations and a
 3. **Execution**: Watch real-time progress bars as your plugins are fetched and installed.
 
 == Changelog ==
+
+= 0.0.3 =
+* 🌐 Full Internationalization (i18n) & GlotPress readiness with bundled translations for Spanish (`es_ES`), German (`de_DE`), French (`fr_FR`), and Hindi (`hi_IN`).
+* 🔄 Right-to-Left (RTL) bidirectional layout support for Arabic, Persian/Farsi, Hebrew, and Urdu admin interfaces.
+* 🏢 WordPress Multisite Network Support: registered network admin management screens for multi-tenant WordPress networks.
+* 🎨 Added native dark mode support respecting system `prefers-color-scheme`.
+* 🛡️ Fixed modal stacking context and added missing `#dsbpm-queue-complete` dialog markup with full ARIA accessibility.
+* 🧹 Added `uninstall.php` for complete database option and transient cleanup upon plugin deletion.
+* ⚡ Bounded recursive filesystem path size calculations to prevent PHP worker execution timeouts.
 
 = 0.0.2 =
 * 📚 Added Stack Recipes & Playbooks Library (E-Commerce, Performance, Security, SEO starter stacks + custom saved recipes).

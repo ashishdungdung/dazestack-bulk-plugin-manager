@@ -3,7 +3,7 @@
 /**
  * Plugin Name: DazeStack Bulk Plugin Manager
  * Description: High-efficiency bulk provisioning for WordPress plugin stacks.
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Ashish Dungdung
  * Author URI: https://ashishdungdung.com
  * License: GPLv2 or later
@@ -16,7 +16,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-define('DSBPM_VERSION', '0.0.2');
+define('DSBPM_VERSION', '0.0.3');
 define('DSBPM_FILE', __FILE__);
 define('DSBPM_DIR', plugin_dir_path(__FILE__));
 define('DSBPM_URL', plugin_dir_url(__FILE__));

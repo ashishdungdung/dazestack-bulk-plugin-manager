@@ -1,6 +1,6 @@
 {
   "name": "dazestack-bulk-plugin-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "High-efficiency bulk provisioning and stack management workspace for WordPress plugins.",
   "type": "module",
   "author": "Ashish Dungdung (DazeStack Series)",
@@ -21,6 +21,7 @@
     "lint:php": "php -l bulk-plugin-manager.php && for f in includes/*.php; do php -l \"$f\"; done",
     "locales:build": "node scripts/build-locales.mjs",
     "locales:makepot": "wp i18n make-pot . languages/dazestack-bulk-plugin-manager.pot --slug=dazestack-bulk-plugin-manager --domain=dazestack-bulk-plugin-manager",
+    "build:zip": "rm -f dazestack-bulk-plugin-manager.zip && zip -r dazestack-bulk-plugin-manager.zip bulk-plugin-manager.php uninstall.php readme.txt includes/ assets/ languages/ -x '*.DS_Store*'",
     "deploy": "bash deploy.sh"
   },
   "keywords": [

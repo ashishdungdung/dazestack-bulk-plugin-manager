@@ -5,6 +5,23 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [0.0.3] — 2026-11-20
+
+### 🌐 Internationalization & Accessibility
+- **Full i18n & GlotPress Readiness**: Textdomain properly loaded via `plugins_loaded` hook and localized script translations connected through `wp_set_script_translations`.
+- **Bundled Fallback Locales**: Built and packaged binary `.mo` / `.po` catalogs for Spanish (`es_ES`), German (`de_DE`), French (`fr_FR`), and Hindi (`hi_IN`).
+- **Bidirectional RTL Support**: Native RTL layout flipping (`body.rtl`, `[dir="rtl"]`) for Arabic (`ar`), Hebrew (`he_IL`), Urdu (`ur`), and Persian (`fa_IR`).
+- **Accessible Queue Dialog**: Fixed missing `#dsbpm-queue-complete` dialog structure in DOM with complete ARIA attributes (`role="dialog"`, `aria-modal="true"`).
+- **Z-Index Stacking Guard**: Elevated modal stacking context to `z-index: 999999` with backdrop blur, preventing bleed-through from WordPress admin menu and floating widgets.
+- **Adaptive Dark Mode**: Integrated CSS `@media (prefers-color-scheme: dark)` system token overrides.
+
+### 🏢 Multisite & Core Reliability
+- **WordPress Multisite Network Provisioning**: Registered `network_admin_menu` hooks and `-network` screen IDs for network super-administrators.
+- **Data Hygiene (`uninstall.php`)**: Automated scrubbing of plugin options, transient caches, and recipes upon uninstallation.
+- **Bounded Path Traversal**: Enforced max depth ($8) and symlink verification in `class-dsbpm-metrics.php` to prevent execution timeouts on large filesystems.
+
+---
+
 ## [0.0.2] — 2026-11-20
 
 ### 📚 Added
