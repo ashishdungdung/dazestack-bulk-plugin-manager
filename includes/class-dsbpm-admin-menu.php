@@ -376,6 +376,18 @@ class DSBPM_Admin_Menu
 							</div>
 						</div>
 					</div>
+
+					<div class="dsbpm-modal" id="dsbpm-queue-complete" role="dialog" aria-modal="true" aria-hidden="true">
+						<div class="dsbpm-modal__content">
+							<div class="dsbpm-modal__title"><?php esc_html_e('Queue Completed', 'dazestack-bulk-plugin-manager'); ?></div>
+							<div class="dsbpm-modal__body" id="dsbpm-queue-complete-body">
+								<?php esc_html_e('Your plugin queue has finished processing. Site metrics have been refreshed.', 'dazestack-bulk-plugin-manager'); ?>
+							</div>
+							<div class="dsbpm-modal__footer">
+								<button class="button button-primary" id="dsbpm-queue-complete-close"><?php esc_html_e('Done', 'dazestack-bulk-plugin-manager'); ?></button>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<?php $this->render_support_cards(); ?>

@@ -160,11 +160,14 @@ class DSBPM_Installer
 		}
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		$plugins = get_plugins();
+		$norm_slug = str_replace('_', '-', strtolower($slug));
 		foreach ($plugins as $file => $data) {
-			if (dirname($file) === $slug) {
+			$dir = strtolower(dirname($file));
+			$base = strtolower(basename($file, '.php'));
+			if ($dir === $slug || str_replace('_', '-', $dir) === $norm_slug) {
 				return $file;
 			}
-			if (basename($file, '.php') === $slug) {
+			if ($base === $slug || str_replace('_', '-', $base) === $norm_slug) {
 				return $file;
 			}
 		}

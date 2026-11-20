@@ -83,14 +83,17 @@ class DSBPM_Metrics
 		);
 	}
 
-	public function path_size($path)
+	public function path_size($path, $depth = 0, $max_depth = 8)
 	{
+		if ($depth > $max_depth) {
+			return 0;
+		}
 		$size = 0;
 		if (is_file($path)) {
 			return (int) filesize($path);
 		}
 		$path = rtrim($path, '/');
-		if (! is_dir($path)) {
+		if (! is_dir($path) || is_link($path)) {
 			return 0;
 		}
 
@@ -104,8 +107,11 @@ class DSBPM_Metrics
 				continue;
 			}
 			$full = $path . '/' . $file;
+			if (is_link($full)) {
+				continue;
+			}
 			if (is_dir($full)) {
-				$size += $this->path_size($full);
+				$size += $this->path_size($full, $depth + 1, $max_depth);
 			} else {
 				$size += (int) filesize($full);
 			}
