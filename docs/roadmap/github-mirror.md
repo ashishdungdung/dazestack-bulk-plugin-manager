@@ -2,8 +2,9 @@
 
 > **Synced:** 2026-11-20T01:05:00.000Z  
 > **Owner:** @ashishdungdung  
-> **Repository:** `dazestack-bulk-plugin-manager`  
-> **Status:** Synchronized with Git & WordPress.org SVN
+> **Repository:** [`ashishdungdung/dazestack-bulk-plugin-manager`](https://github.com/ashishdungdung/dazestack-bulk-plugin-manager)  
+> **Default Branch:** `main` (Tag: `v0.0.2`)  
+> **Status:** Synchronized with GitHub, Git & WordPress.org SVN (Rev 3638346)
 
 ---
 
