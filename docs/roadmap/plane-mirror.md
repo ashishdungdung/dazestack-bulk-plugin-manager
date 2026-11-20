@@ -60,6 +60,6 @@
 | **DSBPM-105** | Live instant search filtering across managed site plugins | `Done` | High | UI / UX |
 | **DSBPM-106** | Dedicated Review & Rate Us page and About & Legal documentation subpages | `Done` | Medium | Marketing & Legal |
 | **DSBPM-107** | Integrate Universal 4-Tier AI Mesh and Memory MCP knowledge indexing | `Done` | High | Intelligence Mesh |
-| **DSBPM-108** | Multisite WordPress Network Provisioning & Subsite Playbook Execution | `Backlog` | High | Multisite Engine |
+| **DSBPM-108** | Multisite WordPress Network Provisioning & Subsite Playbook Execution | `In Progress` | High | Multisite Engine |
 | **DSBPM-109** | AI Stack Conflict Predictor using Kimi-K3 whole-codebase AST audit | `Backlog` | Medium | AI Auditing |
 | **DSBPM-110** | Headless REST API v2 with API Key authentication for CI/CD pipelines | `Backlog` | Medium | REST API |
