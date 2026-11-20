@@ -19,6 +19,8 @@
     "bridge:sync": "node scripts/bridge/sync-all.mjs",
     "hook:install": "bash scripts/bridge/install-git-hook.sh",
     "lint:php": "php -l bulk-plugin-manager.php && for f in includes/*.php; do php -l \"$f\"; done",
+    "locales:build": "node scripts/build-locales.mjs",
+    "locales:makepot": "wp i18n make-pot . languages/dazestack-bulk-plugin-manager.pot --slug=dazestack-bulk-plugin-manager --domain=dazestack-bulk-plugin-manager",
     "deploy": "bash deploy.sh"
   },
   "keywords": [

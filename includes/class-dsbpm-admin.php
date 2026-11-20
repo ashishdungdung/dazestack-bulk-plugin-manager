@@ -73,7 +73,11 @@ class DSBPM_Admin
 
 	public function init_i18n()
 	{
-		// Removed load_plugin_textdomain as it is discouraged for repo-hosted plugins.
+		load_plugin_textdomain(
+			'dazestack-bulk-plugin-manager',
+			false,
+			dirname(plugin_basename(DSBPM_FILE)) . '/languages'
+		);
 	}
 
 	public function enqueue($hook)
